@@ -25,6 +25,12 @@ public class Customer {
     @NotNull
     private String address;
 
+    @NotNull
+    private LocalDate dateOfBirth;
+
+    @NotNull
+    private LocalDate registeredDate;
+
     public UUID getId() {
         return id;
     }
@@ -65,7 +71,11 @@ public class Customer {
         this.dateOfBirth = dateOfBirth;
     }
 
-    @NotNull
-    private LocalDate dateOfBirth;
+    public LocalDate getRegisteredDate() {
+        return registeredDate;
+    }
 
+    public void setRegisteredDate(LocalDate registeredDate) {
+        this.registeredDate = registeredDate;
+    }
 }
